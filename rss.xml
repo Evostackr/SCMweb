@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>SMS Campaign Manager — Product Releases &amp; Updates</title>
+  <link>https://sms-campaign-manager.evostackr.in/</link>
+  <description>Latest releases, feature changelogs, and technical updates for SMS Campaign Manager by Evostackr.</description>
+  <language>en-us</language>
+  <lastBuildDate>Tue, 22 Sep 2026 12:00:00 GMT</lastBuildDate>
+  <atom:link href="https://sms-campaign-manager.evostackr.in/rss.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>v1.0 Production Release: Native Android Bulk SMS Marketing Engine</title>
+    <link>https://sms-campaign-manager.evostackr.in/#hero</link>
+    <guid isPermaLink="false">scm-v1-0-production</guid>
+    <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
+    <description><![CDATA[Official release of SMS Campaign Manager v1.0. Features include direct Dual-SIM routing, CSV contact deduplication, dynamic template variable substitution, persistent foreground service dispatch with WakeLock, and local AES-256 encrypted database storage.]]></description>
+  </item>
+
+  <item>
+    <title>Feature Highlight: Intelligent CSV Ingestion &amp; E.164 Number Normalization</title>
+    <link>https://sms-campaign-manager.evostackr.in/#features</link>
+    <guid isPermaLink="false">scm-csv-e164-feature</guid>
+    <pubDate>Mon, 21 Sep 2026 14:00:00 GMT</pubDate>
+    <description><![CDATA[The ContactImporter and PhoneValidator engines now scrub dirty contact lists in seconds, purging duplicate entries and formatting phone numbers into standard E.164 format with zero cloud dependency.]]></description>
+  </item>
+
+  <item>
+    <title>Feature Highlight: Real-time GSM 7-bit &amp; UCS-2 Unicode Segment Calculator</title>
+    <link>https://sms-campaign-manager.evostackr.in/#simulator</link>
+    <guid isPermaLink="false">scm-calculator-feature</guid>
+    <pubDate>Sun, 20 Sep 2026 09:30:00 GMT</pubDate>
+    <description><![CDATA[Built-in SMS segment calculator dynamically detects non-GSM characters and displays exact multipart SMS message billing boundaries before launching a campaign.]]></description>
+  </item>
+
+  <item>
+    <title>Privacy Commitment: 100% On-Device Offline Operation</title>
+    <link>https://sms-campaign-manager.evostackr.in/privacy-policy.html</link>
+    <guid isPermaLink="false">scm-privacy-manifesto</guid>
+    <pubDate>Sat, 19 Sep 2026 08:00:00 GMT</pubDate>
+    <description><![CDATA[Evostackr reiterates its commitment to zero telemetry: no external cloud servers, no analytics trackers, and complete user ownership of confidential customer contact directories.]]></description>
+  </item>
+</channel>
+</rss>

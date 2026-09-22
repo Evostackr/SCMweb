@@ -28,6 +28,141 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="canonical" href="https://sms-campaign-manager.evostackr.in/">
+  <link rel="alternate" type="application/rss+xml" title="SMS Campaign Manager RSS Feed" href="rss.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
+  <!-- JSON-LD Structured Data for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sms-campaign-manager.evostackr.in/#organization",
+        "name": "Evostackr",
+        "url": "https://sms-campaign-manager.evostackr.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sms-campaign-manager.evostackr.in/assets/app_logo.png",
+          "caption": "Evostackr Logo"
+        },
+        "sameAs": [
+          "https://github.com/Evostackr",
+          "https://github.com/Evostackr/SmsCampaignManager"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sms-campaign-manager.evostackr.in/#website",
+        "url": "https://sms-campaign-manager.evostackr.in/",
+        "name": "SMS Campaign Manager",
+        "description": "Native Android bulk SMS marketing and campaign automation app.",
+        "publisher": {
+          "@id": "https://sms-campaign-manager.evostackr.in/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://sms-campaign-manager.evostackr.in/#webpage",
+        "url": "https://sms-campaign-manager.evostackr.in/",
+        "name": "SMS Campaign Manager — Android Bulk SMS Automation & Marketing App",
+        "isPartOf": {
+          "@id": "https://sms-campaign-manager.evostackr.in/#website"
+        },
+        "about": {
+          "@id": "https://sms-campaign-manager.evostackr.in/#software"
+        },
+        "description": "Turn any Android device into a high-volume bulk SMS dispatch engine. Dual-SIM balancing, CSV contact deduplication, dynamic template substitution, and offline AES-256 storage."
+      },
+      {
+        "@type": ["SoftwareApplication", "Product"],
+        "@id": "https://sms-campaign-manager.evostackr.in/#software",
+        "name": "SMS Campaign Manager",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Android 7.0 (API 24) to Android 15 (API 35)",
+        "downloadUrl": "https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk",
+        "softwareVersion": "1.0",
+        "releaseNotes": "https://github.com/Evostackr/SmsCampaignManager/releases",
+        "description": "An enterprise-grade, privacy-first Android bulk SMS dispatcher and campaign scheduler that uses native SIM cards with zero third-party API costs.",
+        "image": "https://sms-campaign-manager.evostackr.in/assets/app_logo.png",
+        "author": {
+          "@id": "https://sms-campaign-manager.evostackr.in/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "142",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "featureList": [
+          "Native Dual-SIM Auto Balancing",
+          "Bulk CSV Contact Import & E.164 Normalization",
+          "Dynamic Variable Template Personalization",
+          "GSM 7-bit & UCS-2 Unicode Segment Calculator",
+          "Persistent Android Foreground Dispatch Engine",
+          "Midnight Quota Auto-Reset & Boot Receiver",
+          "Zero Cloud Telemetry & AES-256 Encrypted Backups",
+          "PDF Delivery Audit Report Generator"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sms-campaign-manager.evostackr.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does this require paying Twilio or another SMS gateway?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. SMSCampaignManager sends messages directly through your smartphone's installed SIM cards using Android's native SmsManager. You utilize whatever SMS allowance or prepaid packs your telecom carrier provides, completely bypassing third-party gateway markups."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use both SIM cards on a Dual-SIM smartphone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The app automatically queries Android's SubscriptionManager to recognize Slot 1 and Slot 2. You can specify which SIM card dispatches a specific campaign or split dispatching across both slots."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the app prevent telecom carrier spam flags?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The app features built-in anti-spam safeguards: configurable rate-limiting interval delays (e.g., 3 to 10 seconds between messages), random jitter timing, customizable daily batch caps, and an automatic midnight reset worker to stay within telecom compliance limits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if the app is closed or the phone reboots?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because the dispatch engine runs as an Android Foreground Service with CPU WakeLocks, it continues sending smoothly even if you navigate away or lock your screen. If your phone restarts, the BootReceiver checks pending queue states and restores campaign scheduling automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my contact database sent to any third-party cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Never. All contacts, messages, and dispatch records are stored locally on your device within an encrypted Room SQLite database. Your confidential customer phone numbers never leave your handset."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">

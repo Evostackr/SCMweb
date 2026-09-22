@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemaps and Feeds
+Sitemap: https://sms-campaign-manager.evostackr.in/sitemap.xml
+Sitemap: https://evostackr.github.io/SCMweb/sitemap.xml
