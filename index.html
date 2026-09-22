@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS Campaign Manager — Android Bulk SMS Automation & Marketing App</title>
+  <meta name="description" content="Turn any Android device into a high-volume SMS campaign powerhouse. Dual-SIM auto switching, smart CSV imports, dynamic personalization tags, rate-limiting, and foreground delivery engine with 0 middleman API costs.">
+  <meta name="keywords" content="SMS Campaign Manager, Android Bulk SMS, SMS Marketing App, Dual SIM SMS, Jetpack Compose, Evostackr, Bulk SMS Gateway, Android SMS Automation">
+  <meta name="author" content="Evostackr">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://evostackr.github.io/SCMweb/">
+  <meta property="og:title" content="SMS Campaign Manager — Bulk SMS & Campaign Automation for Android">
+  <meta property="og:description" content="Zero API markup. Direct carrier SMS dispatch with Dual-SIM support, intelligent CSV contact deduplication, and unstoppable foreground execution.">
+  <meta property="og:image" content="assets/app_logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SMS Campaign Manager — Android Bulk SMS Powerhouse">
+  <meta name="twitter:description" content="Direct device-based bulk SMS dispatching with Dual-SIM rotation, dynamic tags, and zero recurring server bills.">
+  <meta name="twitter:image" content="assets/app_logo.png">
+
+  <link rel="icon" type="image/png" href="assets/icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Background Glow & Grid Canvas -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" id="brand-logo-link">
+        <img src="assets/icon.png" alt="SMS Campaign Manager Logo" class="brand-icon">
+        <div class="brand-text-wrap">
+          <span class="brand-title">SMS<span class="gradient-text">CampaignManager</span></span>
+          <span class="brand-badge">v1.0 Pro</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="main-nav">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#simulator" class="nav-link">Live Simulator</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#permissions" class="nav-link">Permissions</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/Evostackr/SmsCampaignManager" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" id="github-header-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Star Repo</span>
+        </a>
+        <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn btn-primary btn-sm" id="download-header-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download APK</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="pill-badge" id="hero-pill-badge">
+          <span class="pill-dot"></span>
+          <span>Native Android Bulk SMS Marketing & Automation</span>
+          <span class="pill-tag">Signed APK Ready</span>
+        </div>
+
+        <h1 class="hero-title" id="main-hero-heading">
+          Turn Any Android Phone Into a <span class="gradient-text">High-Volume SMS</span> Dispatch Engine
+        </h1>
+
+        <p class="hero-description">
+          Eliminate expensive monthly SMS API gateways and third-party fees. <strong>SMS Campaign Manager</strong> leverages your device’s native SIM cards, unlimited carrier SMS quotas, CSV contact intelligence, and background execution to automate high-impact bulk messaging with 100% data privacy.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn btn-primary btn-lg" id="hero-download-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <div>
+              <div class="btn-label-sm">Production Release</div>
+              <div class="btn-label-lg">Download Signed APK</div>
+            </div>
+          </a>
+
+          <a href="#simulator" class="btn btn-outline btn-lg" id="hero-simulator-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Try Interactive Simulator</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-card">
+            <span class="stat-number">$0.00</span>
+            <span class="stat-label">Gateway API Costs</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-card">
+            <span class="stat-number">Dual-SIM</span>
+            <span class="stat-label">Auto Slot Balancing</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Local & Private (No Cloud)</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-card">
+            <span class="stat-number">SDK 35</span>
+            <span class="stat-label">Android 15 Optimized</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Phone Mockup / Showcase Preview -->
+      <div class="hero-visual">
+        <div class="device-card-wrapper">
+          <div class="device-glow"></div>
+          <div class="device-frame">
+            <div class="device-top-speaker"></div>
+            <div class="device-screen">
+              <!-- App Screen Mock -->
+              <div class="mock-status-bar">
+                <span>09:41</span>
+                <div class="status-icons">
+                  <span class="mock-badge-sim">SIM 1 • Jio 5G</span>
+                  <span>📶</span>
+                  <span>🔋 98%</span>
+                </div>
+              </div>
+
+              <div class="mock-app-header">
+                <div class="mock-app-brand">
+                  <img src="assets/icon.png" alt="Logo" class="mock-app-icon">
+                  <div>
+                    <div class="mock-app-title">SMSCampaignManager</div>
+                    <div class="mock-app-sub">Campaign: Festive Launch 2026</div>
+                  </div>
+                </div>
+                <span class="status-pill status-active">Active</span>
+              </div>
+
+              <!-- Live Dispatch Progress Box -->
+              <div class="mock-card mock-progress-card">
+                <div class="mock-progress-header">
+                  <span>Dispatching Recipient 482 of 500</span>
+                  <span class="mock-pct">96.4%</span>
+                </div>
+                <div class="mock-bar-bg">
+                  <div class="mock-bar-fill" style="width: 96.4%;"></div>
+                </div>
+                <div class="mock-metrics-row">
+                  <div><span class="metric-val text-green">468</span> Sent</div>
+                  <div><span class="metric-val text-blue">14</span> In Flight</div>
+                  <div><span class="metric-val text-red">0</span> Failed</div>
+                </div>
+              </div>
+
+              <!-- Live Message Preview Bubble -->
+              <div class="mock-card mock-msg-card">
+                <div class="mock-msg-tag">Dynamic Template Output:</div>
+                <div class="mock-msg-bubble">
+                  "Hi <strong>Aarav Sharma</strong>! 🎉 Your exclusive Evostackr VIP pass for <strong>Mega Sale 2026</strong> is ready. Use code <strong>SAVE40</strong> at checkout!"
+                </div>
+                <div class="mock-msg-meta">
+                  <span>GSM-7 (1 Segment • 138 Chars)</span>
+                  <span>Interval: 4s</span>
+                </div>
+              </div>
+
+              <!-- Quick Stats in App -->
+              <div class="mock-stats-grid">
+                <div class="mock-stat-tile">
+                  <span class="stat-small-label">SIM Used</span>
+                  <span class="stat-small-val">Jio True 5G</span>
+                </div>
+                <div class="mock-stat-tile">
+                  <span class="stat-small-label">Throughput</span>
+                  <span class="stat-small-val">850 SMS/hr</span>
+                </div>
+              </div>
+
+              <div class="mock-floating-toast">
+                <span class="toast-dot"></span>
+                <span>SMS #482 delivered to +91 98765 43210</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem vs Solution Comparison Banner -->
+  <section class="comparison-banner-section">
+    <div class="container">
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-bad">
+          <div class="comparison-badge red">Traditional SMS Gateways</div>
+          <h3>Costly & Invasive Cloud Gateways</h3>
+          <ul class="comp-list">
+            <li>❌ <strong>Exorbitant Per-SMS Fees:</strong> $0.015 to $0.05 per message drains your marketing budget fast.</li>
+            <li>❌ <strong>Customer Privacy Risks:</strong> Your entire customer phonebook is uploaded to third-party cloud servers.</li>
+            <li>❌ <strong>Complex API Approvals:</strong> Lengthy account reviews, mandatory DLT paperwork, and sudden vendor bans.</li>
+            <li>❌ <strong>Recurring Subscriptions:</strong> Ongoing monthly platform retainers just to maintain access.</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card comparison-good">
+          <div class="comparison-badge green">The SMSCampaignManager Advantage</div>
+          <h3>Native Android Direct-to-Carrier Engine</h3>
+          <ul class="comp-list">
+            <li>✅ <strong>Zero Cost Per SMS:</strong> Uses existing carrier SIM plans or prepaid unlimited packs already on your phone.</li>
+            <li>✅ <strong>100% Offline & Private:</strong> Contact lists and messages stay encrypted strictly on your Android device.</li>
+            <li>✅ <strong>Instant Deployment:</strong> Just install the signed APK, insert SIM cards, and start sending immediately.</li>
+            <li>✅ <strong>Unstoppable Foreground Service:</strong> Keeps sending even when the screen is off or device reboots.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Core Features Grid -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Enterprise Grade Capabilities</span>
+        <h2 class="section-title">Engineered For High-Scale Local SMS Delivery</h2>
+        <p class="section-subtitle">
+          Built with Kotlin, Jetpack Compose, and Android system services for high throughput, battery resilience, and precision delivery tracking.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Dual SIM -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="5" y="2" width="14" height="20" rx="3"></rect>
+              <line x1="9" y1="6" x2="15" y2="6"></line>
+              <circle cx="12" cy="18" r="1"></circle>
+            </svg>
+          </div>
+          <h3 class="feature-title">Native Dual-SIM Auto Balancing</h3>
+          <p class="feature-desc">
+            Directly integrates with Android’s <code>SubscriptionManager</code>. Detects active SIM slots (Jio, Airtel, Vodafone, T-Mobile), monitors roaming flags, and lets you assign dedicated campaigns to specific SIMs or alternate automatically.
+          </p>
+          <div class="feature-footer">
+            <span class="tech-pill">SubscriptionManager</span>
+            <span class="tech-pill">Dual-Slot API</span>
+          </div>
+        </div>
+
+        <!-- Feature 2: CSV Engine -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Bulk CSV Import & Deduplication</h3>
+          <p class="feature-desc">
+            Effortlessly ingest thousands of contacts in seconds. The built-in parser automatically sanitizes phone numbers, normalizes country codes to E.164, strips invalid characters, and purges duplicate numbers on the fly.
+          </p>
+          <div class="feature-footer">
+            <span class="tech-pill">E.164 Normalizer</span>
+            <span class="tech-pill">De-duplication</span>
+          </div>
+        </div>
+
+        <!-- Feature 3: Dynamic Templates -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-purple">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Dynamic Personalization Studio</h3>
+          <p class="feature-desc">
+            Personalize each message using placeholders like <code>{name}</code>, <code>{company}</code>, <code>{amount}</code>, or custom CSV columns. Real-time GSM-7 and UCS-2 segment calculator ensures you never pay unexpected split SMS penalties.
+          </p>
+          <div class="feature-footer">
+            <span class="tech-pill">Variable Tag Engine</span>
+            <span class="tech-pill">GSM-7 & UCS-2</span>
+          </div>
+        </div>
+
+        <!-- Feature 4: Persistent Foreground Dispatch -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-amber">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="feature-title">Resilient Foreground Dispatcher</h3>
+          <p class="feature-desc">
+            Powered by Android <code>SmsSendingService</code> running as a sticky foreground service with a persistent notification. Employs CPU WakeLocks to keep sending smoothly even when your phone screen turns off or switches apps.
+          </p>
+          <div class="feature-footer">
+            <span class="tech-pill">Foreground Service</span>
+            <span class="tech-pill">WakeLock</span>
+          </div>
+        </div>
+
+        <!-- Feature 5: Midnight Reset & Reboot Worker -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-cyan">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Auto-Resume & Quota Resets</h3>
+          <p class="feature-desc">
+            Carrier daily SMS limit reached? The app pauses gracefully and automatically schedules <code>MidnightResetReceiver</code> to resume the moment your carrier balance refreshes at 00:00. Even survives unexpected device reboots.
+          </p>
+          <div class="feature-footer">
+            <span class="tech-pill">BootReceiver</span>
+            <span class="tech-pill">AlarmManager</span>
+          </div>
+        </div>
+
+        <!-- Feature 6: Local Encrypted Backup & PDF Audits -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap icon-red">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Local AES Encryption & PDF Audits</h3>
+          <p class="feature-desc">
+            Your client data belongs strictly to you. Features military-grade AES-256 encrypted local backups, automated periodic snapshots, and 1-tap PDF & CSV delivery audit report exports for your records or client proof-of-work.
+          </p>
+          <div class="feature-footer">
+            <span class="tech-pill">AES-256 Engine</span>
+            <span class="tech-pill">PDF & CSV Exporter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Simulator Section -->
+  <section class="section simulator-section" id="simulator">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Hands-On Interactive Experience</span>
+        <h2 class="section-title">Test The Campaign Engine in Action</h2>
+        <p class="section-subtitle">
+          Experience how SMSCampaignManager executes variable template substitutions, calculates SMS segment bounds, adjusts interval delays, and dispatches messages in real time.
+        </p>
+      </div>
+
+      <div class="simulator-wrapper">
+        <!-- Left Panel: Control Station -->
+        <div class="sim-control-panel">
+          <div class="sim-tabs" role="tablist">
+            <button class="sim-tab-btn active" id="tab-dispatch-btn" onclick="switchSimTab('dispatch')">
+              <span>🚀 Dispatch Studio</span>
+            </button>
+            <button class="sim-tab-btn" id="tab-cleaner-btn" onclick="switchSimTab('cleaner')">
+              <span>🧹 CSV Cleanser</span>
+            </button>
+            <button class="sim-tab-btn" id="tab-analytics-btn" onclick="switchSimTab('analytics')">
+              <span>📊 Live Analytics</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: Dispatch Studio -->
+          <div class="sim-tab-content active" id="tab-dispatch">
+            <div class="control-group">
+              <label for="sim-slot-select" class="control-label">
+                <span>Select Outgoing SIM Slot</span>
+                <span class="label-helper" id="sim-carrier-indicator">Active: Jio True 5G</span>
+              </label>
+              <div class="sim-selector-grid">
+                <button type="button" class="sim-chip active" id="sim-chip-1" onclick="selectSimSlot(1)">
+                  <span class="sim-chip-name">SIM 1</span>
+                  <span class="sim-chip-sub">Jio 5G • 100/day</span>
+                </button>
+                <button type="button" class="sim-chip" id="sim-chip-2" onclick="selectSimSlot(2)">
+                  <span class="sim-chip-name">SIM 2</span>
+                  <span class="sim-chip-sub">Airtel 4G • 100/day</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="target-group-select" class="control-label">
+                <span>Target Contact Group</span>
+                <span class="badge-count" id="group-recipient-count">5 Recipients</span>
+              </label>
+              <select id="target-group-select" class="form-select" onchange="onGroupChange()">
+                <option value="retail">Festive Retail Buyers (5 Contacts)</option>
+                <option value="vip">VIP Loyalty Club (10 Contacts)</option>
+                <option value="leads">Webinar Registrants (20 Contacts)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <div class="label-row">
+                <label for="sim-template-input" class="control-label">Message Template</label>
+                <div class="variable-pills">
+                  <button type="button" class="var-btn" onclick="insertTag('{name}')">+ {name}</button>
+                  <button type="button" class="var-btn" onclick="insertTag('{deal}')">+ {deal}</button>
+                  <button type="button" class="var-btn" onclick="insertTag('{code}')">+ {code}</button>
+                </div>
+              </div>
+              <textarea id="sim-template-input" class="form-textarea" rows="3" oninput="updateTemplateStats()">Hey {name}! 🎁 Use code {code} to claim {deal} on your next order today. Valid till midnight!</textarea>
+
+              <!-- Live Character & Segment Calculator (Matches SmsCalculator.kt) -->
+              <div class="calculator-bar" id="calc-stats-bar">
+                <div class="calc-stat">
+                  <span class="calc-label">Characters:</span>
+                  <span class="calc-val" id="calc-char-count">0</span>
+                </div>
+                <div class="calc-stat">
+                  <span class="calc-label">Encoding:</span>
+                  <span class="calc-val text-blue" id="calc-encoding">GSM 7-bit</span>
+                </div>
+                <div class="calc-stat">
+                  <span class="calc-label">Segments:</span>
+                  <span class="calc-val text-green" id="calc-segments">1 SMS</span>
+                </div>
+                <div class="calc-stat">
+                  <span class="calc-label">Est. Total SMS:</span>
+                  <span class="calc-val text-purple" id="calc-total-sms">5</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <div class="label-row">
+                <label for="rate-interval-slider" class="control-label">Rate Limiting Interval (Anti-Spam Delay)</label>
+                <span class="slider-val-badge" id="interval-display">2.0 seconds</span>
+              </div>
+              <input type="range" id="rate-interval-slider" min="1" max="8" step="0.5" value="2" class="form-range" oninput="updateInterval(this.value)">
+              <div class="range-marks">
+                <span>1s (High Speed)</span>
+                <span>4s (Recommended)</span>
+                <span>8s (Conservative)</span>
+              </div>
+            </div>
+
+            <div class="action-buttons-row">
+              <button type="button" class="btn btn-primary btn-block" id="start-dispatch-btn" onclick="toggleDispatch()">
+                <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span id="start-btn-text">Start Live Dispatch</span>
+              </button>
+              <button type="button" class="btn btn-secondary" id="reset-dispatch-btn" onclick="resetDispatch()">
+                <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                  <path d="M3 3v5h5"></path>
+                </svg>
+                <span>Reset</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TAB 2: CSV Cleanser Demo -->
+          <div class="sim-tab-content" id="tab-cleaner">
+            <div class="cleaner-intro">
+              <p>See how the built-in <code>ContactImporter</code> and <code>PhoneValidator</code> inspect raw CSV files, strip duplicates, sanitize white spaces, and enforce E.164 standardization.</p>
+            </div>
+            <div class="cleaner-demo-box">
+              <div class="cleaner-col">
+                <div class="cleaner-col-title text-red">⚠️ Raw Imported Input (CSV)</div>
+                <div class="csv-sample-list" id="raw-csv-list">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+              <div class="cleaner-arrow">➔</div>
+              <div class="cleaner-col">
+                <div class="cleaner-col-title text-green">✅ Sanitized & Deduplicated</div>
+                <div class="csv-sample-list" id="cleaned-csv-list">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline btn-block mt-3" onclick="shuffleCleanDemo()">
+              <span>Regenerate Sample Contacts</span>
+            </button>
+          </div>
+
+          <!-- TAB 3: Live Analytics -->
+          <div class="sim-tab-content" id="tab-analytics">
+            <div class="analytics-preview-card">
+              <div class="analytics-meter-row">
+                <div class="delivery-rate-dial">
+                  <div class="dial-inner">
+                    <span class="dial-number" id="analytics-rate">98.8%</span>
+                    <span class="dial-label">Delivery Success</span>
+                  </div>
+                </div>
+                <div class="analytics-breakdown">
+                  <div class="analytics-metric">
+                    <span class="metric-indicator bg-green"></span>
+                    <span class="metric-name">Delivered:</span>
+                    <span class="metric-count" id="stat-delivered-count">1,248</span>
+                  </div>
+                  <div class="analytics-metric">
+                    <span class="metric-indicator bg-blue"></span>
+                    <span class="metric-name">Sent (Pending Ack):</span>
+                    <span class="metric-count" id="stat-sent-count">12</span>
+                  </div>
+                  <div class="analytics-metric">
+                    <span class="metric-indicator bg-red"></span>
+                    <span class="metric-name">Failed (Invalid/DND):</span>
+                    <span class="metric-count" id="stat-failed-count">3</span>
+                  </div>
+                </div>
+              </div>
+              <div class="analytics-actions mt-3">
+                <button type="button" class="btn btn-secondary btn-block" onclick="simulatePdfExport()">
+                  <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                  </svg>
+                  <span>Simulate PDF Delivery Report Export</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel: Live Phone Execution Screen -->
+        <div class="sim-phone-display">
+          <div class="mockup-frame">
+            <div class="mockup-notch"></div>
+            <div class="mockup-screen">
+              <!-- Android Top Bar -->
+              <div class="phone-status">
+                <span id="phone-time">10:42</span>
+                <div class="phone-icons">
+                  <span id="phone-sim-indicator">SIM 1 Jio</span>
+                  <span>📶</span>
+                  <span>100%</span>
+                </div>
+              </div>
+
+              <!-- In-App Header -->
+              <div class="phone-app-bar">
+                <div class="app-bar-brand">
+                  <img src="assets/icon.png" alt="App Icon" class="app-bar-icon">
+                  <div class="app-bar-info">
+                    <div class="app-bar-title">Active Campaign</div>
+                    <div class="app-bar-subtitle" id="phone-campaign-status">Idle • Ready to Dispatch</div>
+                  </div>
+                </div>
+                <div class="live-dot-wrap" id="live-pulsing-dot" style="display: none;">
+                  <span class="pulsing-dot"></span>
+                  <span class="live-text">SENDING</span>
+                </div>
+              </div>
+
+              <!-- Dispatch Progress Container -->
+              <div class="phone-progress-box">
+                <div class="progress-labels">
+                  <span class="progress-title">Dispatch Progress</span>
+                  <span class="progress-pct" id="live-progress-pct">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="live-progress-bar" style="width: 0%;"></div>
+                </div>
+                <div class="progress-details">
+                  <span id="live-sent-counter">0 / 5 Sent</span>
+                  <span id="live-speed-counter">0 SMS/min</span>
+                </div>
+              </div>
+
+              <!-- Message Preview Display -->
+              <div class="phone-msg-preview-card">
+                <div class="preview-header">
+                  <span>Current Personalization Preview:</span>
+                  <span class="preview-recipient" id="live-recipient-tag">Recipient: Aarav</span>
+                </div>
+                <div class="preview-body" id="live-preview-body">
+                  Hey Aarav! 🎁 Use code SAVE40 to claim 40% OFF on your next order today. Valid till midnight!
+                </div>
+              </div>
+
+              <!-- Terminal-style Delivery Log Feed -->
+              <div class="phone-log-container">
+                <div class="log-header">
+                  <span>REAL-TIME DELIVERY LOG</span>
+                  <span class="log-badge" id="log-count-badge">0 events</span>
+                </div>
+                <div class="log-terminal" id="live-log-terminal">
+                  <div class="log-entry log-system">System ready. Waiting to trigger dispatch...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture & Code Stack -->
+  <section class="section tech-section" id="architecture">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Modern Android Architecture</span>
+        <h2 class="section-title">Built On Modern Android Engineering</h2>
+        <p class="section-subtitle">
+          Engineered adhering to Google's official Android Architecture Guidelines with Clean Architecture, unidirectional data flow, and native performance.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-category">UI Layer</span>
+            <span class="tech-badge">Modern Declarative</span>
+          </div>
+          <h4 class="tech-name">Jetpack Compose & Material 3</h4>
+          <p class="tech-detail">
+            100% Kotlin-written declarative UI using Material Theme 3. Fully dynamic Dark Mode, adaptive screen layouts, Skeleton loaders, and custom canvas analytics charts.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-category">Architecture</span>
+            <span class="tech-badge">Reactive MVVM</span>
+          </div>
+          <h4 class="tech-name">Hilt DI & Coroutines Flow</h4>
+          <p class="tech-detail">
+            Decoupled Clean Architecture featuring Dagger Hilt for dependency injection, Kotlin Coroutines for asynchronous dispatching, and StateFlow for state management.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-category">Local Persistence</span>
+            <span class="tech-badge">Offline-First</span>
+          </div>
+          <h4 class="tech-name">Room Database & DAOs</h4>
+          <p class="tech-detail">
+            High-performance SQLite abstraction with Room. Stores campaigns, contacts, recipient status codes, and scheduled jobs with zero latency and full offline support.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-category">System Services</span>
+            <span class="tech-badge">Background Engine</span>
+          </div>
+          <h4 class="tech-name">Telephony & WorkManager</h4>
+          <p class="tech-detail">
+            Direct access to <code>SmsManager</code>, <code>SubscriptionManager</code>, and <code>WorkManager</code> with custom BroadcastReceivers for device reboot and midnight rollover.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech Specs Quick Table -->
+      <div class="specs-table-wrapper">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>Value</th>
+              <th>Technical Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Target SDK</td>
+              <td><span class="spec-highlight">Android 15 (API 35)</span></td>
+              <td>Compiled with the latest Android 15 toolchain</td>
+            </tr>
+            <tr>
+              <td>Minimum SDK</td>
+              <td><span class="spec-highlight">Android 7.0 (API 24)</span></td>
+              <td>Compatible with over 95% of active Android devices worldwide</td>
+            </tr>
+            <tr>
+              <td>Language & Tooling</td>
+              <td>Kotlin 2.0+ / Gradle KTS</td>
+              <td>Type-safe Kotlin DSL build scripts</td>
+            </tr>
+            <tr>
+              <td>Package Namespace</td>
+              <td><code>com.evostackr.smscampaignmanager</code></td>
+              <td>Official release package namespace</td>
+            </tr>
+            <tr>
+              <td>APK Artifact</td>
+              <td><code>SMSCampaignManager-signed-production.apk</code></td>
+              <td>Cryptographically signed with release keystore</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Permissions Transparency Matrix -->
+  <section class="section permissions-section" id="permissions">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Privacy & Security Transparency</span>
+        <h2 class="section-title">Zero Hidden Permissions. Total Transparency.</h2>
+        <p class="section-subtitle">
+          SMSCampaignManager only requests permissions directly essential to performing its core SMS dispatch and scheduling features.
+        </p>
+      </div>
+
+      <div class="permissions-table-wrap">
+        <table class="permissions-table">
+          <thead>
+            <tr>
+              <th>Android Permission</th>
+              <th>Purpose & Usage</th>
+              <th>Required?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>android.permission.SEND_SMS</code></td>
+              <td>Enables the device to transmit SMS messages directly through the selected carrier SIM card.</td>
+              <td><span class="badge-status req">Mandatory</span></td>
+            </tr>
+            <tr>
+              <td><code>android.permission.READ_PHONE_STATE</code></td>
+              <td>Inspects active SIM subscriptions (Slot 1 vs Slot 2), carrier network names, and roaming status.</td>
+              <td><span class="badge-status req">Mandatory</span></td>
+            </tr>
+            <tr>
+              <td><code>android.permission.POST_NOTIFICATIONS</code></td>
+              <td>Displays persistent foreground service progress and dispatch completion alerts on Android 13+.</td>
+              <td><span class="badge-status req">Mandatory</span></td>
+            </tr>
+            <tr>
+              <td><code>android.permission.FOREGROUND_SERVICE</code></td>
+              <td>Ensures background SMS sending operations continue without being killed by OS battery optimization.</td>
+              <td><span class="badge-status req">Mandatory</span></td>
+            </tr>
+            <tr>
+              <td><code>android.permission.RECEIVE_BOOT_COMPLETED</code></td>
+              <td>Restores scheduled campaigns and alarms automatically if your device restarts.</td>
+              <td><span class="badge-status opt">Optional / Background</span></td>
+            </tr>
+            <tr>
+              <td><code>android.permission.READ_CONTACTS</code></td>
+              <td>Allows importing contacts directly from the device's native address book.</td>
+              <td><span class="badge-status opt">Optional</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Installation Section -->
+  <section class="section download-section" id="download">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-glow"></div>
+        <div class="download-content">
+          <img src="assets/app_logo.png" alt="App Logo" class="download-logo">
+          <h2 class="download-title">Get SMS Campaign Manager Today</h2>
+          <p class="download-desc">
+            Download the cryptographically signed production APK directly from GitHub. Ready for sideloading on any Android 7.0+ device.
+          </p>
+
+          <div class="download-cta-row">
+            <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn btn-primary btn-xl" id="main-download-apk-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <div>
+                <div class="btn-label-sm">Android 7.0 to 15 Ready</div>
+                <div class="btn-label-lg">Download Signed Production APK (v1.0)</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/Evostackr/SmsCampaignManager" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-xl" id="main-view-github-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>Explore Source Code</span>
+            </a>
+          </div>
+
+          <!-- 4-Step Quick Install -->
+          <div class="steps-row">
+            <div class="step-item">
+              <span class="step-num">1</span>
+              <span class="step-text">Download APK to your phone</span>
+            </div>
+            <div class="step-item">
+              <span class="step-num">2</span>
+              <span class="step-text">Allow "Install Unknown Apps"</span>
+            </div>
+            <div class="step-item">
+              <span class="step-num">3</span>
+              <span class="step-text">Grant SMS & Phone permissions</span>
+            </div>
+            <div class="step-item">
+              <span class="step-num">4</span>
+              <span class="step-text">Import CSV & Launch Campaign</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Everything You Need To Know</h2>
+        <p class="section-subtitle">
+          Got questions about how device-based bulk SMS works? We've got answers.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Does this require paying Twilio or another SMS gateway?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>No.</strong> SMSCampaignManager sends messages directly through your smartphone's installed SIM cards using Android's native <code>SmsManager</code>. You utilize whatever SMS allowance or prepaid packs your telecom carrier (e.g. Jio, Airtel, Vi, T-Mobile) provides, completely bypassing third-party gateway markups.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I use both SIM cards on a Dual-SIM smartphone?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Yes.</strong> The app automatically queries Android's <code>SubscriptionManager</code> to recognize Slot 1 and Slot 2. You can specify which SIM card dispatches a specific campaign or split dispatching across both slots.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How does the app prevent telecom carrier spam flags?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The app features built-in anti-spam safeguards: configurable rate-limiting interval delays (e.g., 3 to 10 seconds between messages), random jitter timing, customizable daily batch caps, and an automatic midnight reset worker to stay within telecom compliance limits.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What happens if the app is closed or the phone reboots?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Because the dispatch engine runs as an Android <strong>Foreground Service</strong> with CPU WakeLocks, it continues sending smoothly even if you navigate away or lock your screen. If your phone restarts, the <code>BootReceiver</code> checks pending queue states and restores campaign scheduling automatically.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Is my contact database sent to any third-party cloud?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Never.</strong> All contacts, messages, and dispatch records are stored locally on your device within an encrypted Room SQLite database. Your confidential customer phone numbers never leave your handset.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/icon.png" alt="Logo" class="brand-icon">
+            <span class="brand-title">SMS<span class="gradient-text">CampaignManager</span></span>
+          </div>
+          <p class="footer-tagline">
+            Professional Bulk SMS & Campaign Management for Android. Built with passion by <strong>Evostackr</strong>.
+          </p>
+        </div>
+
+        <div class="footer-nav-groups">
+          <div class="footer-group">
+            <h5>Project</h5>
+            <a href="https://github.com/Evostackr/SmsCampaignManager" target="_blank" rel="noopener noreferrer">Source Code</a>
+            <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download>Download APK</a>
+            <a href="https://github.com/Evostackr/SmsCampaignManager/issues" target="_blank" rel="noopener noreferrer">Issue Tracker</a>
+            <a href="https://github.com/Evostackr/SmsCampaignManager/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
+          </div>
+
+          <div class="footer-group">
+            <h5>Evostackr Links</h5>
+            <a href="https://evostackr.in/apps/smscampaignmanager/about" target="_blank" rel="noopener noreferrer">About Us</a>
+            <a href="https://evostackr.in/apps/smscampaignmanager/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="https://evostackr.in/apps/smscampaignmanager/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+            <a href="https://evostackr.in/apps/smscampaignmanager/contact" target="_blank" rel="noopener noreferrer">Contact Support</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Evostackr. Open source under the MIT License.</p>
+        <p class="built-with">Built with Jetpack Compose &bull; Android 15 &bull; Kotlin</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
