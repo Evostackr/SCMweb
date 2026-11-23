@@ -2,803 +2,673 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>SMS Campaign Manager — High-Volume Bulk SMS Marketing & Automation for Android</title>
-  <meta name="description" content="Turn any Android phone into a high-volume SMS campaign powerhouse. Direct carrier Dual-SIM dispatch, CSV contact deduplication, dynamic template substitution, and 100% private offline-first execution with $0 API fees." />
-  <meta name="keywords" content="SMS Campaign Manager, Android Bulk SMS, SMS Marketing App, Dual SIM SMS, Jetpack Compose, Evostackr, Bulk SMS Gateway, Android SMS Automation" />
-  <meta name="author" content="Evostackr" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SMS Campaign Manager — Bulk SMS Dispatcher & Campaign Automation for Android</title>
+    <meta name="description" content="Download SMS Campaign Manager for Android. Native Dual-SIM carrier dispatch, CSV contact deduplication, dynamic template personalization, and 100% private offline-first execution with $0 API fees." />
+    <meta name="keywords" content="SMS Campaign Manager, Android Bulk SMS, SMS Marketing App, Dual SIM SMS, Jetpack Compose, Evostackr, Bulk SMS Gateway, Android SMS Automation" />
+    <meta name="author" content="Evostackr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://sms-campaign-manager.evostackr.in/" />
+    <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="SMS Campaign Manager RSS Feed" href="rss.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
 
-  <!-- Canonical & Alternate Feeds -->
-  <link rel="canonical" href="https://sms-campaign-manager.evostackr.in/" />
-  <link rel="alternate" type="application/rss+xml" title="SMS Campaign Manager RSS Feed" href="rss.xml" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
-  <link rel="shortcut icon" type="image/png" href="assets/icon.png" />
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sms-campaign-manager.evostackr.in/" />
+    <meta property="og:title" content="SMS Campaign Manager — Bulk SMS & Automation for Android" />
+    <meta property="og:description" content="Turn any Android phone into a high-volume SMS dispatch powerhouse. Native Dual-SIM auto balancing, CSV deduplication, and zero server fees." />
+    <meta property="og:image" content="assets/images/hero/phone.png" />
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sms-campaign-manager.evostackr.in/" />
-  <meta property="og:title" content="SMS Campaign Manager — Bulk SMS & Campaign Automation for Android" />
-  <meta property="og:description" content="Zero API markup. Direct carrier Dual-SIM dispatch with intelligent CSV contact deduplication and persistent foreground execution." />
-  <meta property="og:image" content="assets/images/screenshots/01_dashboard.png" />
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SMS Campaign Manager — Android Bulk SMS Powerhouse" />
+    <meta name="twitter:description" content="Direct device-based bulk SMS dispatching with Dual-SIM rotation, dynamic tags, and zero recurring server bills." />
+    <meta name="twitter:image" content="assets/images/hero/phone.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SMS Campaign Manager — Android Bulk SMS Powerhouse" />
-  <meta name="twitter:description" content="Direct device-based bulk SMS dispatching with Dual-SIM rotation, dynamic tags, and zero recurring server bills." />
-  <meta name="twitter:image" content="assets/images/screenshots/01_dashboard.png" />
+    <!-- Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
-  <!-- ========================= CSS here ========================= -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-  <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/custom.css" />
+    <!-- CSS Files (Native Appvilla Suite) -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-  <!-- JSON-LD Structured Data for Rich Snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://sms-campaign-manager.evostackr.in/#organization",
-        "name": "Evostackr",
-        "url": "https://sms-campaign-manager.evostackr.in/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://sms-campaign-manager.evostackr.in/assets/app_logo.png",
-          "caption": "Evostackr Logo"
-        },
-        "sameAs": [
-          "https://github.com/Evostackr",
-          "https://github.com/Evostackr/SmsCampaignManager"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://sms-campaign-manager.evostackr.in/#website",
-        "url": "https://sms-campaign-manager.evostackr.in/",
-        "name": "SMS Campaign Manager",
-        "description": "Native Android bulk SMS marketing and campaign automation app.",
-        "publisher": {
-          "@id": "https://sms-campaign-manager.evostackr.in/#organization"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://sms-campaign-manager.evostackr.in/#webpage",
-        "url": "https://sms-campaign-manager.evostackr.in/",
-        "name": "SMS Campaign Manager — Android Bulk SMS Automation & Marketing App",
-        "isPartOf": {
-          "@id": "https://sms-campaign-manager.evostackr.in/#website"
-        },
-        "about": {
-          "@id": "https://sms-campaign-manager.evostackr.in/#software"
-        },
-        "description": "Turn any Android device into a high-volume bulk SMS dispatch engine. Dual-SIM balancing, CSV contact deduplication, dynamic template substitution, and offline AES-256 storage."
-      },
-      {
-        "@type": ["SoftwareApplication", "Product"],
-        "@id": "https://sms-campaign-manager.evostackr.in/#software",
-        "name": "SMS Campaign Manager",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Android 7.0 (API 24) to Android 15 (API 35)",
-        "downloadUrl": "https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk",
-        "softwareVersion": "1.0",
-        "releaseNotes": "https://github.com/Evostackr/SmsCampaignManager/releases",
-        "description": "An enterprise-grade, privacy-first Android bulk SMS dispatcher and campaign scheduler that uses native SIM cards with zero third-party API costs.",
-        "image": "https://sms-campaign-manager.evostackr.in/assets/images/screenshots/01_dashboard.png",
-        "author": {
-          "@id": "https://sms-campaign-manager.evostackr.in/#organization"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "ratingCount": "142",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "featureList": [
-          "Native Dual-SIM Auto Balancing",
-          "Bulk CSV Contact Import & E.164 Normalization",
-          "Dynamic Variable Template Personalization",
-          "GSM 7-bit & UCS-2 Unicode Segment Calculator",
-          "Persistent Android Foreground Dispatch Engine",
-          "Midnight Quota Auto-Reset & Boot Receiver",
-          "Zero Cloud Telemetry & AES-256 Encrypted Backups",
-          "PDF Delivery Audit Report Generator"
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://sms-campaign-manager.evostackr.in/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does this require paying Twilio or another SMS gateway?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. SMSCampaignManager sends messages directly through your smartphone's installed SIM cards using Android's native SmsManager. You utilize whatever SMS allowance or prepaid packs your telecom carrier provides, completely bypassing third-party gateway markups."
-            }
+    <!-- JSON-LD Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sms-campaign-manager.evostackr.in/#organization",
+          "name": "Evostackr",
+          "url": "https://sms-campaign-manager.evostackr.in/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sms-campaign-manager.evostackr.in/assets/images/logo/logo.svg",
+            "caption": "Evostackr Logo"
           },
-          {
-            "@type": "Question",
-            "name": "Can I use both SIM cards on a Dual-SIM smartphone?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The app automatically queries Android's SubscriptionManager to recognize Slot 1 and Slot 2. You can specify which SIM card dispatches a specific campaign or split dispatching across both slots."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does the app prevent telecom carrier spam flags?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The app features built-in anti-spam safeguards: configurable rate-limiting interval delays (e.g., 3 to 10 seconds between messages), random jitter timing, customizable daily batch caps, and an automatic midnight reset worker to stay within telecom compliance limits."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens if the app is closed or the phone reboots?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Because the dispatch engine runs as an Android Foreground Service with CPU WakeLocks, it continues sending smoothly even if you navigate away or lock your screen. If your phone restarts, the BootReceiver checks pending queue states and restores campaign scheduling automatically."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my contact database sent to any third-party cloud?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Never. All contacts, messages, and dispatch records are stored locally on your device within an encrypted Room SQLite database. Your confidential customer phone numbers never leave your handset."
-            }
+          "sameAs": [
+            "https://github.com/Evostackr",
+            "https://github.com/Evostackr/SmsCampaignManager"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sms-campaign-manager.evostackr.in/#website",
+          "url": "https://sms-campaign-manager.evostackr.in/",
+          "name": "SMS Campaign Manager",
+          "description": "Native Android bulk SMS marketing and campaign automation app.",
+          "publisher": {
+            "@id": "https://sms-campaign-manager.evostackr.in/#organization"
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://sms-campaign-manager.evostackr.in/#webpage",
+          "url": "https://sms-campaign-manager.evostackr.in/",
+          "name": "SMS Campaign Manager — Bulk SMS Dispatcher & Campaign Automation for Android",
+          "isPartOf": {
+            "@id": "https://sms-campaign-manager.evostackr.in/#website"
+          },
+          "about": {
+            "@id": "https://sms-campaign-manager.evostackr.in/#software"
+          },
+          "description": "Turn any Android phone into a high-volume SMS dispatch powerhouse. Native Dual-SIM auto balancing, CSV deduplication, and zero server fees."
+        },
+        {
+          "@type": ["SoftwareApplication", "Product"],
+          "@id": "https://sms-campaign-manager.evostackr.in/#software",
+          "name": "SMS Campaign Manager",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Android 7.0 (API 24) to Android 15 (API 35)",
+          "downloadUrl": "https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk",
+          "softwareVersion": "1.0.0",
+          "releaseNotes": "https://github.com/Evostackr/SmsCampaignManager/releases",
+          "description": "An enterprise-grade, privacy-first Android bulk SMS dispatcher and campaign scheduler that uses native SIM cards with zero third-party API costs.",
+          "image": "https://sms-campaign-manager.evostackr.in/assets/images/hero/phone.png",
+          "author": {
+            "@id": "https://sms-campaign-manager.evostackr.in/#organization"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "142",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://sms-campaign-manager.evostackr.in/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does this require paying Twilio or another cloud SMS gateway?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. SMS Campaign Manager sends messages directly through your smartphone's installed SIM cards using Android's native SmsManager, completely eliminating third-party gateway markups and recurring bills."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use both SIM cards on a Dual-SIM smartphone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The app automatically recognizes Slot 1 and Slot 2 via SubscriptionManager. You can designate specific SIM slots per campaign or alternate automatically across both cards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What safeguards prevent carrier spam flags?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Built-in rate-limiting delays (3 to 10 seconds), randomized jitter timing, customizable daily batch caps, and automated midnight reset workers ensure telecom compliance."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-icon">
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- /End Preloader -->
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
-  <!-- Start Header Area -->
-  <header class="header navbar-area">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-12">
-          <div class="nav-inner">
-            <!-- Start Navbar -->
-            <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/white-logo.svg" alt="SMS Campaign Manager Logo">
-              </a>
-              <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="toggler-icon"></span>
-                <span class="toggler-icon"></span>
-                <span class="toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                <ul id="nav" class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a href="#home" class="page-scroll active" aria-label="Toggle navigation">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#features" class="page-scroll" aria-label="Toggle navigation">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#screenshots" class="page-scroll" aria-label="Toggle navigation">App Screens</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#simulator" class="page-scroll" aria-label="Toggle navigation">Live Simulator</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#comparison" class="page-scroll" aria-label="Toggle navigation">Zero-Cost vs Cloud</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="about.html" aria-label="Toggle navigation">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="contact.html" aria-label="Toggle navigation">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="button add-list-button">
-                <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn">
-                  <i class="lni lni-download me-1"></i> Download APK
-                </a>
-              </div>
-            </nav>
-            <!-- End Navbar -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- End Header Area -->
-
-  <!-- Start Hero Area -->
-  <section id="home" class="hero-area">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5 col-md-12 col-12">
-          <div class="hero-content">
-            <div class="hero-badge-pill wow fadeInLeft" data-wow-delay=".2s">
-              <span class="hero-badge-dot"></span>
-              <span>Native Android Bulk SMS Marketing &bull; Target SDK 35</span>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
             </div>
-            <h1 class="wow fadeInLeft" data-wow-delay=".4s">
-              Turn Any Android Phone Into A Bulk SMS Dispatcher.
-            </h1>
-            <p class="wow fadeInLeft" data-wow-delay=".6s">
-              Eliminate expensive cloud SMS gateway markups and monthly retainers. <strong>SMS Campaign Manager</strong> leverages your device’s native SIM cards, unlimited carrier plans, CSV contact deduplication, and persistent foreground execution for 100% private, cost-free bulk messaging.
-            </p>
-            <div class="button wow fadeInLeft" data-wow-delay=".8s">
-              <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn me-2">
-                <i class="lni lni-android"></i> Download Signed APK
-              </a>
-              <a href="https://github.com/Evostackr/SmsCampaignManager" target="_blank" rel="noopener noreferrer" class="btn btn-alt">
-                <i class="lni lni-github-original"></i> Star on GitHub
-              </a>
-            </div>
-          </div>
         </div>
-        <div class="col-lg-7 col-md-12 col-12">
-          <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
-            <img src="assets/images/hero/phone.png" alt="SMS Campaign Manager Dual Phone Mockup">
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-  <!-- End Hero Area -->
+    <!-- /End Preloader -->
 
-  <!-- Start Features Area -->
-  <section id="features" class="features section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h3 class="wow zoomIn" data-wow-delay=".2s">Enterprise Capabilities</h3>
-            <h2 class="wow fadeInUp" data-wow-delay=".4s">Engineered For High-Scale Local Delivery</h2>
-            <p class="wow fadeInUp" data-wow-delay=".6s">
-              Built with Kotlin, Jetpack Compose, Room SQLite, and Android system services for high throughput, battery resilience, and precision delivery tracking.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Feature 1 -->
-          <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-            <i class="lni lni-mobile"></i>
-            <h3>Native Dual-SIM Balancing</h3>
-            <p>Direct integration with Android <code>SubscriptionManager</code>. Detects active SIM slots (Jio, Airtel, Vodafone, T-Mobile), monitors roaming, and alternates automatically.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Feature 2 -->
-          <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-            <i class="lni lni-files"></i>
-            <h3>Smart CSV Ingestion</h3>
-            <p>Sanitizes phone numbers on the fly, strips whitespace, standardizes country codes to E.164 (+91, +1), and purges duplicate numbers instantly.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Feature 3 -->
-          <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-            <i class="lni lni-text-format"></i>
-            <h3>Dynamic Tag Studio</h3>
-            <p>Personalize each text with <code>{name}</code>, <code>{code}</code>, or custom CSV column tags. Real-time GSM-7 vs UCS-2 Unicode segment calculator prevents billing surprises.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Feature 4 -->
-          <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-            <i class="lni lni-bolt-alt"></i>
-            <h3>Persistent Foreground Service</h3>
-            <p>Runs as an unstoppable Android Foreground Service with CPU WakeLocks. Continues sending smoothly even when your phone screen turns off or switches apps.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Feature 5 -->
-          <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-            <i class="lni lni-timer"></i>
-            <h3>Auto-Resume & Quota Resets</h3>
-            <p>Pauses gracefully when carrier daily limits hit, then automatically resumes via <code>MidnightResetReceiver</code> at 00:00. Survives unexpected device reboots.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Feature 6 -->
-          <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-            <i class="lni lni-shield"></i>
-            <h3>AES-256 Offline Security</h3>
-            <p>Customer phonebooks stay strictly on your device. Encrypted local Room SQLite storage, zero analytics tracking, and 1-tap PDF & CSV delivery audit report exports.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Features Area -->
-
-  <!-- Start Authentic App Screenshots Gallery (From Testphone Emulator) -->
-  <section id="screenshots" class="screenshots-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h3 class="wow zoomIn" data-wow-delay=".2s">Authentic App Showcase</h3>
-            <h2 class="wow fadeInUp" data-wow-delay=".4s">Live Application Screenshots</h2>
-            <p class="wow fadeInUp" data-wow-delay=".6s">
-              Captured directly from the running production release on the Android testphone emulator.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <!-- Screen 1 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".2s">
-            <a href="assets/images/screenshots/01_dashboard.png" class="glightbox">
-              <img src="assets/images/screenshots/01_dashboard.png" alt="Dashboard & SIM Status Screen">
-            </a>
-            <div class="screenshot-title">Carrier Status & Dashboard</div>
-            <div class="screenshot-desc">Real-time SIM slot monitoring, daily quota tracking & sent metrics.</div>
-          </div>
-        </div>
-
-        <!-- Screen 2 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".3s">
-            <a href="assets/images/screenshots/02_campaigns.png" class="glightbox">
-              <img src="assets/images/screenshots/02_campaigns.png" alt="Campaign Management Screen">
-            </a>
-            <div class="screenshot-title">Campaign Management</div>
-            <div class="screenshot-desc">Active queue monitor, pause/resume controls, and campaign logs.</div>
-          </div>
-        </div>
-
-        <!-- Screen 3 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".4s">
-            <a href="assets/images/screenshots/03_create_campaign.png" class="glightbox">
-              <img src="assets/images/screenshots/03_create_campaign.png" alt="Create Campaign Screen">
-            </a>
-            <div class="screenshot-title">New Campaign Setup</div>
-            <div class="screenshot-desc">Pick target groups, select outgoing SIM slot, and configure rate limit intervals.</div>
-          </div>
-        </div>
-
-        <!-- Screen 4 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".5s">
-            <a href="assets/images/screenshots/04_contacts.png" class="glightbox">
-              <img src="assets/images/screenshots/04_contacts.png" alt="Contacts Management Screen">
-            </a>
-            <div class="screenshot-title">Contacts & Groups</div>
-            <div class="screenshot-desc">Bulk CSV importer, contact segmentation, and automatic number deduplication.</div>
-          </div>
-        </div>
-
-        <!-- Screen 5 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".2s">
-            <a href="assets/images/screenshots/06_templates.png" class="glightbox">
-              <img src="assets/images/screenshots/06_templates.png" alt="Templates Studio Screen">
-            </a>
-            <div class="screenshot-title">Template Studio</div>
-            <div class="screenshot-desc">Reusable templates with dynamic tag substitution and segment calculator.</div>
-          </div>
-        </div>
-
-        <!-- Screen 6 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".3s">
-            <a href="assets/images/screenshots/07_reports.png" class="glightbox">
-              <img src="assets/images/screenshots/07_reports.png" alt="Reports & Analytics Screen">
-            </a>
-            <div class="screenshot-title">Delivery Analytics</div>
-            <div class="screenshot-desc">Sent vs Delivered breakdown, error codes, and 1-tap PDF audit export.</div>
-          </div>
-        </div>
-
-        <!-- Screen 7 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".4s">
-            <a href="assets/images/screenshots/08_settings.png" class="glightbox">
-              <img src="assets/images/screenshots/08_settings.png" alt="Settings Screen">
-            </a>
-            <div class="screenshot-title">Settings & Backup</div>
-            <div class="screenshot-desc">Dual-SIM slot routing, AES-256 local backups, and data wipe controls.</div>
-          </div>
-        </div>
-
-        <!-- Screen 8 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="screenshot-card wow fadeInUp" data-wow-delay=".5s">
-            <a href="assets/images/screenshots/05_more_menu.png" class="glightbox">
-              <img src="assets/images/screenshots/05_more_menu.png" alt="Navigation Overview Screen">
-            </a>
-            <div class="screenshot-title">Full Feature Navigation</div>
-            <div class="screenshot-desc">Fast access to templates, reports, legal disclosures, and backup recovery.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Screenshots Area -->
-
-  <!-- Start Interactive Live Simulator Section -->
-  <section id="simulator" class="simulator-section section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h3 class="wow zoomIn" data-wow-delay=".2s">Interactive Sandbox</h3>
-            <h2 class="wow fadeInUp" data-wow-delay=".4s">Test The Campaign Engine Live in Browser</h2>
-            <p class="wow fadeInUp" data-wow-delay=".6s">
-              Experience dynamic tag substitution, real-time GSM-7/Unicode segment calculation, rate-limiting delays, and live dispatch events.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Control Panel -->
-        <div class="col-lg-7 col-md-12 col-12 mb-4 mb-lg-0">
-          <div class="simulator-box">
-            <div class="mb-3">
-              <label class="form-label fw-bold text-dark d-flex justify-content-between">
-                <span>1. Select Outgoing SIM Slot</span>
-                <span id="sim-carrier-indicator" style="color: #2563eb; font-size: 0.85rem;">Active: SIM 1 (Jio 5G)</span>
-              </label>
-              <div class="row g-2">
-                <div class="col-6">
-                  <button type="button" class="sim-slot-btn active w-100 p-2" id="sim-chip-1" onclick="selectSimSlot(1)">
-                    <div style="font-weight: 700;">SIM 1</div>
-                    <div style="font-size: 0.75rem; color: #64748b;">Jio True 5G &bull; 100/day</div>
-                  </button>
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <!-- navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/white-logo.svg" alt="SMS Campaign Manager" style="height: 38px; width: auto;" />
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="#home" class="page-scroll active" aria-label="Toggle navigation">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#features" class="page-scroll" aria-label="Toggle navigation">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#stats" class="page-scroll" aria-label="Toggle navigation">Performance</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#install" class="page-scroll" aria-label="Toggle navigation">How to Install</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#screenshots" class="page-scroll" aria-label="Toggle navigation">Screenshots</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#download" class="page-scroll" aria-label="Toggle navigation">Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button add-list-button">
+                                <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" class="btn" download="SMSCampaignManager-signed-production.apk">
+                                    <i class="lni lni-android-original me-1"></i> Download APK
+                                </a>
+                            </div>
+                        </nav>
+                        <!-- navbar -->
+                    </div>
                 </div>
-                <div class="col-6">
-                  <button type="button" class="sim-slot-btn w-100 p-2" id="sim-chip-2" onclick="selectSimSlot(2)">
-                    <div style="font-weight: 700;">SIM 2</div>
-                    <div style="font-size: 0.75rem; color: #64748b;">Airtel 4G &bull; 100/day</div>
-                  </button>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Hero Area -->
+    <section id="home" class="hero-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="hero-content">
+                        <span class="badge px-3 py-2 mb-3 rounded-pill text-uppercase fw-semibold" style="background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.35); color: #FFFFFF; letter-spacing: 0.5px; backdrop-filter: blur(4px);">
+                            📱 Native Android Bulk SMS Marketing
+                        </span>
+                        <h1 class="wow fadeInLeft" data-wow-delay=".4s">Turn Any Android Phone Into A Bulk SMS Dispatcher.</h1>
+                        <p class="wow fadeInLeft" data-wow-delay=".6s">Eliminate expensive cloud SMS gateway markups and monthly retainers. SMS Campaign Manager leverages your device’s native SIM cards, unlimited carrier plans, CSV contact deduplication, and persistent foreground execution for 100% private, cost-free bulk messaging.</p>
+                        <div class="button wow fadeInLeft" data-wow-delay=".8s">
+                            <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" class="btn" download="SMSCampaignManager-signed-production.apk">
+                                <i class="lni lni-android-original"></i> Download APK (Free)
+                            </a>
+                            <a href="#features" class="btn btn-alt">
+                                <i class="lni lni-cog"></i> Explore Features
+                            </a>
+                        </div>
+                        <div class="mt-4 pt-1 d-flex flex-wrap align-items-center gap-2">
+                            <span class="badge d-inline-flex align-items-center px-3 py-2 rounded-pill fw-semibold text-white shadow-sm" style="background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.32); font-size: 13.5px; backdrop-filter: blur(6px);">
+                                <i class="lni lni-checkmark-circle me-1" style="color: #4ADE80; font-size: 16px;"></i> 100% Free &amp; Signed
+                            </span>
+                            <span class="badge d-inline-flex align-items-center px-3 py-2 rounded-pill fw-semibold text-white shadow-sm" style="background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.32); font-size: 13.5px; backdrop-filter: blur(6px);">
+                                <i class="lni lni-checkmark-circle me-1" style="color: #4ADE80; font-size: 16px;"></i> Dual-SIM Native Balancing
+                            </span>
+                            <span class="badge d-inline-flex align-items-center px-3 py-2 rounded-pill fw-semibold text-white shadow-sm" style="background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.32); font-size: 13.5px; backdrop-filter: blur(6px);">
+                                <i class="lni lni-checkmark-circle me-1" style="color: #4ADE80; font-size: 16px;"></i> Android 7.0 - 15
+                            </span>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="target-group-select" class="form-label fw-bold text-dark d-flex justify-content-between">
-                <span>2. Target Contact Group</span>
-                <span class="badge bg-primary" id="group-recipient-count">5 Recipients</span>
-              </label>
-              <select id="target-group-select" class="form-select border" onchange="onGroupChange()">
-                <option value="retail">Festive Retail Buyers (5 Contacts)</option>
-                <option value="vip">VIP Loyalty Club (10 Contacts)</option>
-                <option value="leads">Webinar Registrants (20 Contacts)</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <label for="sim-template-input" class="form-label fw-bold text-dark mb-0">3. Message Template</label>
-                <div class="d-flex gap-1">
-                  <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" onclick="insertTag('{name}')">+ {name}</button>
-                  <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" onclick="insertTag('{deal}')">+ {deal}</button>
-                  <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" onclick="insertTag('{code}')">+ {code}</button>
+                <div class="col-lg-7 col-md-12 col-12">
+                    <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+                        <img src="assets/images/hero/phone.png" alt="SMS Campaign Manager Mobile App Showcase" class="img-fluid" />
+                    </div>
                 </div>
-              </div>
-              <textarea id="sim-template-input" class="form-control border" rows="3" oninput="updateTemplateStats()">Hey {name}! 🎁 Use code {code} to claim {deal} on your next order today. Valid till midnight!</textarea>
-
-              <!-- Live Calculator Bar -->
-              <div class="row g-2 text-center mt-2 p-2 rounded bg-light border" style="font-size: 0.8rem;">
-                <div class="col-3">
-                  <div class="text-muted" style="font-size: 0.7rem;">CHARS</div>
-                  <div class="text-dark fw-bold" id="calc-char-count">88</div>
-                </div>
-                <div class="col-3">
-                  <div class="text-muted" style="font-size: 0.7rem;">ENCODING</div>
-                  <div class="text-primary fw-bold" id="calc-encoding">GSM 7-bit</div>
-                </div>
-                <div class="col-3">
-                  <div class="text-muted" style="font-size: 0.7rem;">SEGMENTS</div>
-                  <div class="text-success fw-bold" id="calc-segments">1 SMS</div>
-                </div>
-                <div class="col-3">
-                  <div class="text-muted" style="font-size: 0.7rem;">TOTAL SMS</div>
-                  <div class="text-warning fw-bold" id="calc-total-sms">5</div>
-                </div>
-              </div>
             </div>
-
-            <div class="mb-3">
-              <div class="d-flex justify-content-between text-dark mb-1">
-                <span class="fw-bold">4. Rate Limiting Interval</span>
-                <span id="interval-display" style="color: #2563eb; font-weight: 600;">2.0 seconds</span>
-              </div>
-              <input type="range" class="form-range" id="rate-interval-slider" min="1" max="8" step="0.5" value="2" oninput="updateInterval(this.value)">
-            </div>
-
-            <div class="d-flex gap-2">
-              <button type="button" class="btn btn-primary flex-grow-1" id="start-dispatch-btn" onclick="toggleDispatch()">
-                <i class="lni lni-play me-1"></i> <span id="start-btn-text">Start Live Dispatch</span>
-              </button>
-              <button type="button" class="btn btn-outline-secondary" onclick="resetDispatch()">
-                <i class="lni lni-reload"></i> Reset
-              </button>
-            </div>
-          </div>
         </div>
+    </section>
+    <!-- End Hero Area -->
 
-        <!-- Live Terminal & Output Display -->
-        <div class="col-lg-5 col-md-12 col-12">
-          <div class="simulator-box h-100 d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="text-dark fw-bold" style="font-size: 0.9rem;">
-                <i class="lni lni-pulse text-success me-1"></i> Simulated Android Device
-              </span>
-              <span class="badge bg-secondary" id="phone-campaign-status">Idle &bull; Ready</span>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="mb-3">
-              <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem; margin-bottom: 4px;">
-                <span>Queue Progress:</span>
-                <span class="text-primary fw-bold" id="live-progress-pct">0%</span>
-              </div>
-              <div class="progress" style="height: 8px; background: #e2e8f0;">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" id="live-progress-bar" style="width: 0%;"></div>
-              </div>
-              <div class="d-flex justify-content-between text-muted mt-1" style="font-size: 0.7rem;">
-                <span id="live-sent-counter">0 / 5 Sent</span>
-                <span id="live-speed-counter">30 SMS/min</span>
-              </div>
-            </div>
-
-            <!-- Live Personalization Preview -->
-            <div class="p-3 mb-3 rounded bg-light border" style="font-size: 0.8rem;">
-              <div class="text-muted mb-1" style="font-size: 0.7rem; font-weight: 600;">PERSONALIZED MESSAGE PREVIEW:</div>
-              <div class="text-primary fw-bold mb-1" id="live-recipient-tag">To: Aarav Sharma (+91 98234 11201)</div>
-              <div class="text-dark" id="live-preview-body" style="font-style: italic; line-height: 1.4;">
-                "Hey Aarav Sharma! 🎁 Use code SAVE40 to claim 40% OFF on your next order today. Valid till midnight!"
-              </div>
-            </div>
-
-            <!-- Terminal Logs -->
-            <div class="flex-grow-1">
-              <div class="d-flex justify-content-between text-muted mb-1" style="font-size: 0.7rem;">
-                <span>DISPATCH LOG</span>
-                <span id="log-count-badge">0 events</span>
-              </div>
-              <div class="sim-terminal p-2 bg-dark rounded text-light" id="live-log-terminal" style="font-family: monospace; font-size: 0.75rem; height: 160px; overflow-y: auto;">
-                <div class="text-secondary">[00:00:00] System initialized. Ready to execute SmsSendingService.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Live Simulator Section -->
-
-  <!-- Start Achievement Area -->
-  <section class="our-achievement section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
-          <div class="title">
-            <h2>Built for Scale, Designed for Total Privacy</h2>
-            <p>Empowering businesses, developers, and creators worldwide with zero cloud middlemen.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-12">
-              <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
-                <h3 class="counter"><span class="countup" cup-end="100">100</span>%</h3>
-                <p>On-Device Privacy</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12">
-              <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
-                <h3 class="counter"><span class="countup" cup-end="0">0</span>$</h3>
-                <p>API Subscription Cost</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12">
-              <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
-                <h3 class="counter"><span class="countup" cup-end="35">35</span></h3>
-                <p>Target SDK (Android 15)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Achievement Area -->
-
-  <!-- Start Cost & Privacy Comparison Area -->
-  <section id="comparison" class="comparison-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h3 class="wow zoomIn" data-wow-delay=".2s">Cost &amp; Security Comparison</h3>
-            <h2 class="wow fadeInUp" data-wow-delay=".4s">Why Device-Based Sending Wins</h2>
-            <p class="wow fadeInUp" data-wow-delay=".6s">Compare traditional cloud SMS vendors with your own smartphone running SMS Campaign Manager.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="comp-box-bad h-100">
-            <div class="badge bg-danger text-white mb-2">Cloud SMS Gateways (Twilio, Sinch, etc.)</div>
-            <h3 class="h4 mb-3" style="color: #991b1b;">High Costs &amp; Data Exposure</h3>
-            <ul class="list-unstyled d-flex flex-column gap-2 text-secondary">
-              <li>❌ <strong>$0.015 to $0.05 per SMS:</strong> Sending 10,000 texts costs $150 to $500 every single campaign.</li>
-              <li>❌ <strong>Customer Privacy Risks:</strong> Your entire phonebook is uploaded to third-party databases.</li>
-              <li>❌ <strong>Vendor Lock-in:</strong> Lengthy account verifications, complex DLT paperwork, and sudden vendor account freezes.</li>
-              <li>❌ <strong>Recurring Subscriptions:</strong> Ongoing monthly platform retainers just to maintain access.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="comp-box-good h-100">
-            <div class="badge bg-success text-white mb-2">SMS Campaign Manager (Evostackr)</div>
-            <h3 class="h4 mb-3" style="color: #166534;">Direct-to-Carrier Autonomy</h3>
-            <ul class="list-unstyled d-flex flex-column gap-2 text-dark">
-              <li>✅ <strong>Zero Cost Per SMS:</strong> Uses existing carrier SIM plans or prepaid unlimited packs already on your phone.</li>
-              <li>✅ <strong>100% Offline &amp; Private:</strong> Contact lists and messages stay encrypted locally in Room SQLite.</li>
-              <li>✅ <strong>Dual-SIM Support:</strong> Auto-switch or balance campaigns between SIM 1 and SIM 2.</li>
-              <li>✅ <strong>Unstoppable Foreground Engine:</strong> Keeps sending even when the screen is locked or phone reboots.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Cost & Privacy Comparison Area -->
-
-  <!-- Start Call To Action Area -->
-  <section class="section call-action">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-          <div class="cta-content">
-            <h2 class="wow fadeInUp" data-wow-delay=".2s">Get SMS Campaign Manager Today</h2>
-            <p class="wow fadeInUp" data-wow-delay=".4s">
-              Download the cryptographically signed release APK directly from GitHub. Ready for sideloading on any Android 7.0+ device.
-            </p>
-            <div class="button wow fadeInUp" data-wow-delay=".6s">
-              <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn me-2">
-                <i class="lni lni-download me-1"></i> Download APK (v1.0 Production)
-              </a>
-              <a href="https://github.com/Evostackr/SmsCampaignManager" target="_blank" rel="noopener noreferrer" class="btn btn-alt">
-                <i class="lni lni-github-original me-1"></i> View Source Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Call To Action Area -->
-
-  <!-- Start Footer Area -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-12">
-            <!-- Single Widget -->
-            <div class="single-footer f-about">
-              <div class="logo mb-3">
-                <a href="index.html" class="d-flex align-items-center">
-                  <img src="assets/icon.png" alt="Logo" style="width: 36px; height: 36px; border-radius: 8px;">
-                  <span class="text-white fw-bold ms-2" style="font-size: 1.1rem;">SMS<span style="color: #60a5fa;">CampaignManager</span></span>
-                </a>
-              </div>
-              <p>Professional bulk SMS marketing, contact list segmenting, and campaign scheduling application for Android.</p>
-              <p class="copyright-text mt-3">Built with passion by <a href="https://github.com/Evostackr" target="_blank" rel="noopener noreferrer">Evostackr</a>. Open source under MIT License.</p>
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-8 col-12">
+    <!-- Start Features Area -->
+    <section id="features" class="features section">
+        <div class="container">
             <div class="row">
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="single-footer f-link">
-                  <h3>Project</h3>
-                  <ul>
-                    <li><a href="https://github.com/Evostackr/SmsCampaignManager" target="_blank" rel="noopener noreferrer">Source Code</a></li>
-                    <li><a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download>Download APK</a></li>
-                    <li><a href="https://github.com/Evostackr/SmsCampaignManager/issues" target="_blank" rel="noopener noreferrer">Issue Tracker</a></li>
-                    <li><a href="https://github.com/Evostackr/SmsCampaignManager/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
-                  </ul>
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Enterprise Capabilities</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Engineered For High-Scale Local Delivery</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Built with Kotlin, Jetpack Compose, Room SQLite, and Android system services for high throughput, battery resilience, and precision delivery tracking.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="single-footer f-link">
-                  <h3>Documentation</h3>
-                  <ul>
-                    <li><a href="#features">Key Features</a></li>
-                    <li><a href="#screenshots">App Screenshots</a></li>
-                    <li><a href="#simulator">Live Simulator</a></li>
-                    <li><a href="#comparison">Cost Analysis</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-12">
-                <div class="single-footer f-link">
-                  <h3>Company &amp; Legal</h3>
-                  <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
-                    <li><a href="contact.html">Contact Support</a></li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Feature 1 -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+                        <i class="lni lni-mobile"></i>
+                        <h3>Native Dual-SIM Balancing</h3>
+                        <p>Direct integration with Android <code>SubscriptionManager</code>. Detects active SIM slots (Jio, Airtel, Vodafone, T-Mobile), monitors roaming, and alternates automatically.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Feature 2 -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+                        <i class="lni lni-users"></i>
+                        <h3>Bulk CSV Deduplication</h3>
+                        <p>High-speed contact parser. Handles 50,000+ rows instantly, normalizes E.164 phone formats, flags malformed numbers, and purges duplicates before dispatching.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Feature 3 -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                        <i class="lni lni-timer"></i>
+                        <h3>Anti-Spam Jitter Delays</h3>
+                        <p>Customizable dispatch intervals (3 to 10 seconds) with randomized micro-jitter. Emulates authentic human sending rhythms to safeguard SIM cards against carrier throttling.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Feature 4 -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+                        <i class="lni lni-rocket"></i>
+                        <h3>Persistent Foreground Engine</h3>
+                        <p>Background execution powered by an Android Foreground Service with partial CPU WakeLocks. Dispatches continuously without interruption even when the screen is locked.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Feature 5 -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+                        <i class="lni lni-shield"></i>
+                        <h3>100% Offline &amp; AES-256 Storage</h3>
+                        <p>Zero cloud tracking, zero telemetry leaks, and zero remote data storage. Contacts and message records reside strictly on-device inside an encrypted Room SQLite database.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Feature 6 -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                        <i class="lni lni-bar-chart"></i>
+                        <h3>Delivery Audits &amp; PDF Export</h3>
+                        <p>Real-time telemetry tracking SENT, DELIVERED, and FAILED states via Android <code>PendingIntent</code> callbacks. Generate professional PDF audit reports with a single tap.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
-  <!--/ End Footer Area -->
+    </section>
+    <!-- End Features Area -->
 
-  <!-- Scroll Top -->
-  <a href="#" class="scroll-top">
-    <i class="lni lni-chevron-up"></i>
-  </a>
+    <!-- Start Achievement Area -->
+    <section id="stats" class="our-achievement section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                    <div class="title">
+                        <h2>Engineered for Maximum Speed &amp; Device Safety</h2>
+                        <p>Tested rigorously on modern Android versions with zero impact on battery life and negligible memory overhead.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
+                                <h3 class="counter"><span id="secondo1" class="countup" cup-end="100">100</span>%</h3>
+                                <p>On-Device Scan Coverage</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="counter"><span id="secondo2" class="countup" cup-end="0">0</span>$</h3>
+                                <p>Recurring Cloud API Bills</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
+                                <h3 class="counter"><span id="secondo3" class="countup" cup-end="24">24</span>/7</h3>
+                                <p>Foreground Service Persistence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Achievement Area -->
 
-  <!-- ========================= JS here ========================= -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/tiny-slider.js"></script>
-  <script src="assets/js/glightbox.min.js"></script>
-  <script src="assets/js/count-up.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="app.js"></script>
-  <script>
-    // Initialize GLightbox for app screenshot popups
-    GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      loop: true,
-      autoplayVideos: false
-    });
+    <!-- Start How to Install Area -->
+    <section id="install" class="pricing-table section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Installation</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">How to Install SMS Campaign Manager APK</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Installing the APK directly on Android takes less than 30 seconds. Follow these 3 simple steps:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-table wow fadeInUp" data-wow-delay=".2s">
+                        <div class="table-head">
+                            <div class="mb-3 text-primary" style="font-size: 32px;"><i class="lni lni-download"></i></div>
+                            <h4 class="title">Step 1: Download APK</h4>
+                            <p>Download the official signed release APK directly to your smartphone.</p>
+                            <div class="price my-3">
+                                <span class="badge bg-light text-dark border p-2">SMSCampaignManager.apk (~8 MB)</span>
+                            </div>
+                            <div class="button">
+                                <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" class="btn" download="SMSCampaignManager-signed-production.apk">Download APK</a>
+                            </div>
+                        </div>
+                        <div class="table-content">
+                            <h4 class="middle-title">Specifications</h4>
+                            <ul class="table-list">
+                                <li><i class="lni lni-checkmark-circle"></i> Direct, fast download from GitHub</li>
+                                <li><i class="lni lni-checkmark-circle"></i> Signed Android production key</li>
+                                <li><i class="lni lni-checkmark-circle"></i> No Google Play login required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-table wow fadeInUp" data-wow-delay=".4s">
+                        <div class="table-head">
+                            <div class="mb-3 text-primary" style="font-size: 32px;"><i class="lni lni-cog"></i></div>
+                            <h4 class="title">Step 2: Allow Permissions</h4>
+                            <p>Grant standard Android permissions for SMS dispatch and SIM management.</p>
+                            <div class="price my-3">
+                                <span class="badge bg-light text-dark border p-2">Android Settings &gt; Apps</span>
+                            </div>
+                            <div class="button">
+                                <a href="#install" class="btn btn-alt">Standard Permission</a>
+                            </div>
+                        </div>
+                        <div class="table-content">
+                            <h4 class="middle-title">What to Expect</h4>
+                            <ul class="table-list">
+                                <li><i class="lni lni-checkmark-circle"></i> Tap downloaded file notification</li>
+                                <li><i class="lni lni-checkmark-circle"></i> Toggle "Allow from this source"</li>
+                                <li><i class="lni lni-checkmark-circle"></i> Grant SMS &amp; Phone permissions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-table wow fadeInUp" data-wow-delay=".6s">
+                        <div class="table-head">
+                            <div class="mb-3 text-primary" style="font-size: 32px;"><i class="lni lni-rocket"></i></div>
+                            <h4 class="title">Step 3: Launch &amp; Send</h4>
+                            <p>Import contacts, draft dynamic message templates, and launch campaigns.</p>
+                            <div class="price my-3">
+                                <span class="badge bg-light text-dark border p-2">Zero Gateway Fees Forever</span>
+                            </div>
+                            <div class="button">
+                                <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" class="btn" download="SMSCampaignManager-signed-production.apk">Get Started Now</a>
+                            </div>
+                        </div>
+                        <div class="table-content">
+                            <h4 class="middle-title">Included Tools</h4>
+                            <ul class="table-list">
+                                <li><i class="lni lni-checkmark-circle"></i> Import CSV contacts with 1-tap</li>
+                                <li><i class="lni lni-checkmark-circle"></i> Dynamic {first_name} tag merge</li>
+                                <li><i class="lni lni-checkmark-circle"></i> Full delivery audit report export</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End How to Install Area -->
 
-    // Initialize WOW.js
-    new WOW().init();
-  </script>
+    <!-- Start Screenshots Area -->
+    <section id="screenshots" class="features section" style="background-color: #F9FAFB; padding: 90px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">App Showcase</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">100% Native Jetpack Compose Interface</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Captured live on an Android emulator: modern Material 3 design, fluid animations, and dark mode compliance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/01_dashboard.png" class="glightbox">
+                            <img src="assets/images/screenshots/01_dashboard.png" alt="Live Dashboard &amp; SIM Telemetry" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Live SIM Telemetry</h5>
+                            <p class="small text-muted mb-0">Active Dual-SIM slot health &amp; quota tracker</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/02_campaigns.png" class="glightbox">
+                            <img src="assets/images/screenshots/02_campaigns.png" alt="Active Campaigns &amp; Queue Management" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Campaign Dashboard</h5>
+                            <p class="small text-muted mb-0">Real-time delivery progress &amp; batch logs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/03_create_campaign.png" class="glightbox">
+                            <img src="assets/images/screenshots/03_create_campaign.png" alt="Dynamic Campaign Composer" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Campaign Composer</h5>
+                            <p class="small text-muted mb-0">Dynamic variable tags &amp; SIM slot selector</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/04_contacts.png" class="glightbox">
+                            <img src="assets/images/screenshots/04_contacts.png" alt="CSV Contact Import &amp; Deduplication" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">CSV Contact Manager</h5>
+                            <p class="small text-muted mb-0">E.164 normalization &amp; group segmenting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/05_more_menu.png" class="glightbox">
+                            <img src="assets/images/screenshots/05_more_menu.png" alt="More Menu &amp; Quick Utilities" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Quick Utilities</h5>
+                            <p class="small text-muted mb-0">Fast access to templates, reports &amp; backups</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/06_templates.png" class="glightbox">
+                            <img src="assets/images/screenshots/06_templates.png" alt="Message Template Vault" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Template Vault</h5>
+                            <p class="small text-muted mb-0">Pre-approved message layouts with live tags</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/07_reports.png" class="glightbox">
+                            <img src="assets/images/screenshots/07_reports.png" alt="Delivery Audit &amp; Analytics Reports" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Audit &amp; PDF Export</h5>
+                            <p class="small text-muted mb-0">Carrier delivery breakdown &amp; audit reports</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                        <a href="assets/images/screenshots/08_settings.png" class="glightbox">
+                            <img src="assets/images/screenshots/08_settings.png" alt="Settings &amp; Throttle Delays" class="img-fluid w-100" />
+                        </a>
+                        <div class="p-3 text-center">
+                            <h5 class="fw-bold fs-6 mb-1 text-dark">Anti-Spam Settings</h5>
+                            <p class="small text-muted mb-0">Interval delays, midnight reset &amp; security</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Screenshots Area -->
+
+    <!-- Start Call To Action Area -->
+    <section id="download" class="section call-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                    <div class="cta-content">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Ready to Automate Your Bulk SMS Campaigns?</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">Download SMS Campaign Manager APK directly today. Enjoy dual-SIM rotation, dynamic template tags, and unlimited carrier messaging with zero cloud subscriptions.</p>
+                        <div class="button wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" class="btn" download="SMSCampaignManager-signed-production.apk" style="font-size: 16px; padding: 14px 34px;">
+                                <i class="lni lni-android-original me-2"></i> Download Signed APK (Free)
+                            </a>
+                        </div>
+                        <div class="mt-3 text-white-50 small">
+                            Direct APK download hosted on official GitHub repository • Signed production APK • Clean, fast &amp; private
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Call To Action Area -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-about">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo/white-logo.svg" alt="SMS Campaign Manager" style="height: 38px; width: auto;" />
+                                </a>
+                            </div>
+                            <p class="mt-3">SMS Campaign Manager is an enterprise-grade, privacy-first Android bulk SMS dispatcher and automation platform. Built with Kotlin, Jetpack Compose, and Android system services.</p>
+                            <p class="copyright-text mt-4">&copy; 2026 SMS Campaign Manager &bull; Evostackr. Built for high performance &amp; security.</p>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="single-footer f-link">
+                                    <h3>Features</h3>
+                                    <ul>
+                                        <li><a href="#features">Dual-SIM Balancing</a></li>
+                                        <li><a href="#features">Bulk CSV Deduplication</a></li>
+                                        <li><a href="#features">Anti-Spam Jitter Delays</a></li>
+                                        <li><a href="#features">Foreground Persistence</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="single-footer f-link">
+                                    <h3>Download &amp; Guides</h3>
+                                    <ul>
+                                        <li><a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download="SMSCampaignManager-signed-production.apk">Download APK (Direct)</a></li>
+                                        <li><a href="#install">Installation Guide</a></li>
+                                        <li><a href="#stats">Performance Metrics</a></li>
+                                        <li><a href="#home">Back to Top</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="single-footer f-link">
+                                    <h3>Specifications</h3>
+                                    <ul>
+                                        <li><span class="text-white-50">Package:</span> com.evostackr.smscampaignmanager</li>
+                                        <li><span class="text-white-50">Version:</span> 1.0.0</li>
+                                        <li><span class="text-white-50">APK Size:</span> ~8 MB</li>
+                                        <li><span class="text-white-50">OS Support:</span> Android 7.0 - 15</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        // Initialize GLightbox
+        GLightbox({
+            'href': 'assets/images/hero/phone.png',
+            'type': 'image'
+        });
+        GLightbox({
+            'selector': '.glightbox'
+        });
+    </script>
 </body>
 
 </html>
