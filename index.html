@@ -190,12 +190,8 @@
           <div class="nav-inner">
             <!-- Start Navbar -->
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/icon.png" alt="SMS Campaign Manager Logo" style="width: 38px; height: 38px; border-radius: 8px;">
-                <div class="brand-text-wrapper">
-                  <span class="brand-name">SMS<span style="color: #60a5fa;">CampaignManager</span></span>
-                  <span class="brand-tag">v1.0 Pro &bull; Evostackr</span>
-                </div>
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/white-logo.svg" alt="SMS Campaign Manager Logo">
               </a>
               <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -247,14 +243,14 @@
   <section id="home" class="hero-area">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 col-md-12 col-12">
+        <div class="col-lg-5 col-md-12 col-12">
           <div class="hero-content">
-            <div class="hero-pill-badge wow fadeInLeft" data-wow-delay=".2s">
-              <span class="hero-pill-dot"></span>
+            <div class="hero-badge-pill wow fadeInLeft" data-wow-delay=".2s">
+              <span class="hero-badge-dot"></span>
               <span>Native Android Bulk SMS Marketing &bull; Target SDK 35</span>
             </div>
             <h1 class="wow fadeInLeft" data-wow-delay=".4s">
-              Turn Any Android Phone Into a <span class="gradient-text">Bulk SMS Dispatch</span> Powerhouse.
+              Turn Any Android Phone Into A Bulk SMS Dispatcher.
             </h1>
             <p class="wow fadeInLeft" data-wow-delay=".6s">
               Eliminate expensive cloud SMS gateway markups and monthly retainers. <strong>SMS Campaign Manager</strong> leverages your device’s native SIM cards, unlimited carrier plans, CSV contact deduplication, and persistent foreground execution for 100% private, cost-free bulk messaging.
@@ -269,34 +265,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12 col-12 text-center">
-          <div class="hero-mockup-wrapper wow fadeInRight" data-wow-delay=".4s">
-            <div class="hero-mockup-glow"></div>
-            
-            <!-- Real Emulator Screenshot Mockup -->
-            <div class="hero-device-frame">
-              <div class="device-top-speaker"></div>
-              <div class="hero-device-screen">
-                <img src="assets/images/screenshots/01_dashboard.png" alt="SMS Campaign Manager Dashboard Screen" id="hero-phone-img">
-              </div>
-            </div>
-
-            <!-- Floating Metrics -->
-            <div class="hero-floating-stat hero-stat-top-right">
-              <div class="stat-icon-circle bg-blue-soft">📶</div>
-              <div>
-                <div style="font-weight: 700; font-size: 0.85rem;">Dual-SIM Active</div>
-                <div style="font-size: 0.7rem; color: #94a3b8;">Carrier Auto Balancing</div>
-              </div>
-            </div>
-
-            <div class="hero-floating-stat hero-stat-bottom-left">
-              <div class="stat-icon-circle bg-green-soft">🛡️</div>
-              <div>
-                <div style="font-weight: 700; font-size: 0.85rem;">100% Private</div>
-                <div style="font-size: 0.7rem; color: #94a3b8;">Zero Cloud Data Leakage</div>
-              </div>
-            </div>
+        <div class="col-lg-7 col-md-12 col-12">
+          <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+            <img src="assets/images/hero/phone.png" alt="SMS Campaign Manager Dual Phone Mockup">
           </div>
         </div>
       </div>
@@ -481,14 +452,14 @@
   <!-- End Screenshots Area -->
 
   <!-- Start Interactive Live Simulator Section -->
-  <section id="simulator" class="simulator-section">
+  <section id="simulator" class="simulator-section section">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="section-title text-center">
-            <h3 class="wow zoomIn text-info" data-wow-delay=".2s">Interactive Sandbox</h3>
-            <h2 class="text-white wow fadeInUp" data-wow-delay=".4s">Test The Campaign Engine Live in Browser</h2>
-            <p class="text-muted wow fadeInUp" data-wow-delay=".6s">
+          <div class="section-title">
+            <h3 class="wow zoomIn" data-wow-delay=".2s">Interactive Sandbox</h3>
+            <h2 class="wow fadeInUp" data-wow-delay=".4s">Test The Campaign Engine Live in Browser</h2>
+            <p class="wow fadeInUp" data-wow-delay=".6s">
               Experience dynamic tag substitution, real-time GSM-7/Unicode segment calculation, rate-limiting delays, and live dispatch events.
             </p>
           </div>
@@ -500,32 +471,32 @@
         <div class="col-lg-7 col-md-12 col-12 mb-4 mb-lg-0">
           <div class="simulator-box">
             <div class="mb-3">
-              <label class="form-label text-white d-flex justify-content-between">
+              <label class="form-label fw-bold text-dark d-flex justify-content-between">
                 <span>1. Select Outgoing SIM Slot</span>
-                <span id="sim-carrier-indicator" style="color: #60a5fa; font-size: 0.85rem;">Active: SIM 1 (Jio 5G)</span>
+                <span id="sim-carrier-indicator" style="color: #2563eb; font-size: 0.85rem;">Active: SIM 1 (Jio 5G)</span>
               </label>
               <div class="row g-2">
                 <div class="col-6">
-                  <button type="button" class="sim-slot-btn active" id="sim-chip-1" onclick="selectSimSlot(1)">
+                  <button type="button" class="sim-slot-btn active w-100 p-2" id="sim-chip-1" onclick="selectSimSlot(1)">
                     <div style="font-weight: 700;">SIM 1</div>
-                    <div style="font-size: 0.75rem; color: #94a3b8;">Jio True 5G &bull; 100/day</div>
+                    <div style="font-size: 0.75rem; color: #64748b;">Jio True 5G &bull; 100/day</div>
                   </button>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="sim-slot-btn" id="sim-chip-2" onclick="selectSimSlot(2)">
+                  <button type="button" class="sim-slot-btn w-100 p-2" id="sim-chip-2" onclick="selectSimSlot(2)">
                     <div style="font-weight: 700;">SIM 2</div>
-                    <div style="font-size: 0.75rem; color: #94a3b8;">Airtel 4G &bull; 100/day</div>
+                    <div style="font-size: 0.75rem; color: #64748b;">Airtel 4G &bull; 100/day</div>
                   </button>
                 </div>
               </div>
             </div>
 
             <div class="mb-3">
-              <label for="target-group-select" class="form-label text-white d-flex justify-content-between">
+              <label for="target-group-select" class="form-label fw-bold text-dark d-flex justify-content-between">
                 <span>2. Target Contact Group</span>
                 <span class="badge bg-primary" id="group-recipient-count">5 Recipients</span>
               </label>
-              <select id="target-group-select" class="form-select bg-dark text-white border-secondary" onchange="onGroupChange()">
+              <select id="target-group-select" class="form-select border" onchange="onGroupChange()">
                 <option value="retail">Festive Retail Buyers (5 Contacts)</option>
                 <option value="vip">VIP Loyalty Club (10 Contacts)</option>
                 <option value="leads">Webinar Registrants (20 Contacts)</option>
@@ -534,24 +505,24 @@
 
             <div class="mb-3">
               <div class="d-flex justify-content-between align-items-center mb-1">
-                <label for="sim-template-input" class="form-label text-white mb-0">3. Message Template</label>
+                <label for="sim-template-input" class="form-label fw-bold text-dark mb-0">3. Message Template</label>
                 <div class="d-flex gap-1">
-                  <button type="button" class="sim-tag-btn" onclick="insertTag('{name}')">+ {name}</button>
-                  <button type="button" class="sim-tag-btn" onclick="insertTag('{deal}')">+ {deal}</button>
-                  <button type="button" class="sim-tag-btn" onclick="insertTag('{code}')">+ {code}</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" onclick="insertTag('{name}')">+ {name}</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" onclick="insertTag('{deal}')">+ {deal}</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" onclick="insertTag('{code}')">+ {code}</button>
                 </div>
               </div>
-              <textarea id="sim-template-input" class="form-control bg-dark text-white border-secondary" rows="3" oninput="updateTemplateStats()">Hey {name}! 🎁 Use code {code} to claim {deal} on your next order today. Valid till midnight!</textarea>
+              <textarea id="sim-template-input" class="form-control border" rows="3" oninput="updateTemplateStats()">Hey {name}! 🎁 Use code {code} to claim {deal} on your next order today. Valid till midnight!</textarea>
 
               <!-- Live Calculator Bar -->
-              <div class="row g-2 text-center mt-2 p-2 rounded bg-black border border-secondary" style="font-size: 0.8rem;">
+              <div class="row g-2 text-center mt-2 p-2 rounded bg-light border" style="font-size: 0.8rem;">
                 <div class="col-3">
                   <div class="text-muted" style="font-size: 0.7rem;">CHARS</div>
-                  <div class="text-white fw-bold" id="calc-char-count">88</div>
+                  <div class="text-dark fw-bold" id="calc-char-count">88</div>
                 </div>
                 <div class="col-3">
                   <div class="text-muted" style="font-size: 0.7rem;">ENCODING</div>
-                  <div class="text-info fw-bold" id="calc-encoding">GSM 7-bit</div>
+                  <div class="text-primary fw-bold" id="calc-encoding">GSM 7-bit</div>
                 </div>
                 <div class="col-3">
                   <div class="text-muted" style="font-size: 0.7rem;">SEGMENTS</div>
@@ -565,9 +536,9 @@
             </div>
 
             <div class="mb-3">
-              <div class="d-flex justify-content-between text-white mb-1">
-                <span>4. Rate Limiting Interval</span>
-                <span id="interval-display" style="color: #38bdf8;">2.0 seconds</span>
+              <div class="d-flex justify-content-between text-dark mb-1">
+                <span class="fw-bold">4. Rate Limiting Interval</span>
+                <span id="interval-display" style="color: #2563eb; font-weight: 600;">2.0 seconds</span>
               </div>
               <input type="range" class="form-range" id="rate-interval-slider" min="1" max="8" step="0.5" value="2" oninput="updateInterval(this.value)">
             </div>
@@ -576,7 +547,7 @@
               <button type="button" class="btn btn-primary flex-grow-1" id="start-dispatch-btn" onclick="toggleDispatch()">
                 <i class="lni lni-play me-1"></i> <span id="start-btn-text">Start Live Dispatch</span>
               </button>
-              <button type="button" class="btn btn-secondary" onclick="resetDispatch()">
+              <button type="button" class="btn btn-outline-secondary" onclick="resetDispatch()">
                 <i class="lni lni-reload"></i> Reset
               </button>
             </div>
@@ -585,9 +556,9 @@
 
         <!-- Live Terminal & Output Display -->
         <div class="col-lg-5 col-md-12 col-12">
-          <div class="simulator-box h-100 d-flex flex-direction-column">
+          <div class="simulator-box h-100 d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="text-white fw-bold" style="font-size: 0.9rem;">
+              <span class="text-dark fw-bold" style="font-size: 0.9rem;">
                 <i class="lni lni-pulse text-success me-1"></i> Simulated Android Device
               </span>
               <span class="badge bg-secondary" id="phone-campaign-status">Idle &bull; Ready</span>
@@ -597,9 +568,9 @@
             <div class="mb-3">
               <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem; margin-bottom: 4px;">
                 <span>Queue Progress:</span>
-                <span class="text-info fw-bold" id="live-progress-pct">0%</span>
+                <span class="text-primary fw-bold" id="live-progress-pct">0%</span>
               </div>
-              <div class="progress" style="height: 8px; background: #1e293b;">
+              <div class="progress" style="height: 8px; background: #e2e8f0;">
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" id="live-progress-bar" style="width: 0%;"></div>
               </div>
               <div class="d-flex justify-content-between text-muted mt-1" style="font-size: 0.7rem;">
@@ -609,10 +580,10 @@
             </div>
 
             <!-- Live Personalization Preview -->
-            <div class="p-2 mb-3 rounded bg-dark border border-secondary" style="font-size: 0.8rem;">
-              <div class="text-muted mb-1" style="font-size: 0.7rem;">PERSONALIZED MESSAGE PREVIEW:</div>
-              <div class="text-info fw-bold mb-1" id="live-recipient-tag">To: Aarav Sharma (+91 98234 11201)</div>
-              <div class="text-white" id="live-preview-body" style="font-style: italic; line-height: 1.4;">
+            <div class="p-3 mb-3 rounded bg-light border" style="font-size: 0.8rem;">
+              <div class="text-muted mb-1" style="font-size: 0.7rem; font-weight: 600;">PERSONALIZED MESSAGE PREVIEW:</div>
+              <div class="text-primary fw-bold mb-1" id="live-recipient-tag">To: Aarav Sharma (+91 98234 11201)</div>
+              <div class="text-dark" id="live-preview-body" style="font-style: italic; line-height: 1.4;">
                 "Hey Aarav Sharma! 🎁 Use code SAVE40 to claim 40% OFF on your next order today. Valid till midnight!"
               </div>
             </div>
@@ -623,7 +594,7 @@
                 <span>DISPATCH LOG</span>
                 <span id="log-count-badge">0 events</span>
               </div>
-              <div class="sim-terminal" id="live-log-terminal">
+              <div class="sim-terminal p-2 bg-dark rounded text-light" id="live-log-terminal" style="font-family: monospace; font-size: 0.75rem; height: 160px; overflow-y: auto;">
                 <div class="text-secondary">[00:00:00] System initialized. Ready to execute SmsSendingService.</div>
               </div>
             </div>
