@@ -1,0 +1,4 @@
+# Cloudflare Pages Clean Redirects
+/download   https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk  302
+/github     https://github.com/Evostackr/SmsCampaignManager                                                      302
+/issues     https://github.com/Evostackr/SmsCampaignManager/issues                                               302

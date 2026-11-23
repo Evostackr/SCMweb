@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>404 Page Not Found — SMS Campaign Manager</title>
+  <meta name="description" content="The page you requested was not found. Return to SMS Campaign Manager." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="assets/icon.png" />
+
+  <!-- ========================= CSS here ========================= -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body style="background: #070a12; color: #f8fafc;">
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /End Preloader -->
+
+  <!-- Start Error Area -->
+  <div class="error-area" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px 20px;">
+    <div class="container">
+      <div class="error-content">
+        <a href="index.html" class="d-inline-flex align-items-center mb-4">
+          <img src="assets/icon.png" alt="SMS Campaign Manager" style="width: 48px; height: 48px; border-radius: 12px;">
+          <span class="text-white fw-bold ms-2" style="font-size: 1.3rem;">SMS<span style="color: #60a5fa;">CampaignManager</span></span>
+        </a>
+        <h1 style="font-size: 6rem; font-weight: 900; background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">404</h1>
+        <h2 class="text-white fw-bold mb-3">Oops! Destination Not Found.</h2>
+        <p class="text-muted mx-auto mb-4" style="max-width: 500px; font-size: 1.05rem;">
+          The page or asset you are looking for has been relocated, renamed, or no longer exists.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="index.html" class="btn btn-primary" style="padding: 12px 28px;">
+            <i class="lni lni-home me-1"></i> Return to Homepage
+          </a>
+          <a href="https://github.com/Evostackr/SmsCampaignManager/raw/main/SMSCampaignManager-signed-production.apk" download class="btn btn-secondary" style="padding: 12px 28px;">
+            <i class="lni lni-download me-1"></i> Download APK
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Error Area -->
+
+  <!-- ========================= JS here ========================= -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    window.onload = function () {
+      window.setTimeout(fadeout, 300);
+    }
+    function fadeout() {
+      var pre = document.querySelector('.preloader');
+      if (pre) {
+        pre.style.opacity = '0';
+        pre.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
